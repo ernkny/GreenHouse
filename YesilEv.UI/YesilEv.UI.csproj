@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F17227F-1B23-460A-8617-82D1D238B7B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YesilEv.UI</RootNamespace>
+    <AssemblyName>YesilEv.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\MONSTER\Desktop\YeşilEv-Son\YesilEv.Exe\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>294F3F4EE54B6F0E8254FEC90894C8B5AF88F765</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>YesilEv.UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProducForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProducForm.Designer.cs">
+      <DependentUpon>AddProducForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProductsForm.designer.cs">
+      <DependentUpon>AllProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllSearchHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllSearchHistoryForm.designer.cs">
+      <DependentUpon>AllSearchHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarCodeSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarCodeSearchForm.Designer.cs">
+      <DependentUpon>BarCodeSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoriteAndBlockListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoriteAndBlockListForm.designer.cs">
+      <DependentUpon>FavoriteAndBlockListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPageForm.Designer.cs">
+      <DependentUpon>LoginPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPageForm.Designer.cs">
+      <DependentUpon>ProductPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReport.Designer.cs">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductUpdateForm.Designer.cs">
+      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterPageForm.Designer.cs">
+      <DependentUpon>RegisterPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPageForm.Designer.cs">
+      <DependentUpon>SearchPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAprovedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductAprovedForm.Designer.cs">
+      <DependentUpon>ProductAprovedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubstanceRiskDetectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstanceRiskDetectionForm.Designer.cs">
+      <DependentUpon>SubstanceRiskDetectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPageForm.Designer.cs">
+      <DependentUpon>UserPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTypeForm.Designer.cs">
+      <DependentUpon>UserTypeForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddProducForm.resx">
+      <DependentUpon>AddProducForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllProductsForm.resx">
+      <DependentUpon>AllProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllSearchHistoryForm.resx">
+      <DependentUpon>AllSearchHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarCodeSearchForm.resx">
+      <DependentUpon>BarCodeSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteAndBlockListForm.resx">
+      <DependentUpon>FavoriteAndBlockListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPageForm.resx">
+      <DependentUpon>LoginPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPageForm.resx">
+      <DependentUpon>ProductPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReport.resx">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductUpdateForm.resx">
+      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterPageForm.resx">
+      <DependentUpon>RegisterPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPageForm.resx">
+      <DependentUpon>SearchPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAprovedForm.resx">
+      <DependentUpon>ProductAprovedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstanceRiskDetectionForm.resx">
+      <DependentUpon>SubstanceRiskDetectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPageForm.resx">
+      <DependentUpon>UserPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeForm.resx">
+      <DependentUpon>UserTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="YesilEv.UI_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YesilEv.Common\YesilEv.Common.csproj">
+      <Project>{B8502738-BE1F-42A6-9D3E-B5982983A0BE}</Project>
+      <Name>YesilEv.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEv.Core\YesilEv.Core.csproj">
+      <Project>{E11B23F7-E4BA-41E7-8D88-1102DB14EBA5}</Project>
+      <Name>YesilEv.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEv.DAL\YesilEv.DAL.csproj">
+      <Project>{01354092-310A-4B80-848F-0ECFE92073EE}</Project>
+      <Name>YesilEv.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEv.Entity\YesilEv.Entity.csproj">
+      <Project>{9070062E-5803-41FD-BBF4-E385CC6E7424}</Project>
+      <Name>YesilEv.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEv.Log\YesilEv.Log.csproj">
+      <Project>{BDA10370-4753-4BB5-B38F-32D84693038D}</Project>
+      <Name>YesilEv.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEv.Validation\YesilEv.Validation.csproj">
+      <Project>{06111F7F-438B-492E-B854-6B0143D7CB8E}</Project>
+      <Name>YesilEv.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

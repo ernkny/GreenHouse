@@ -1,0 +1,772 @@
+2022-09-08 16:30:58.9830|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2042,
+  "Name": "BargelloNllog",
+  "CompanyId": 4,
+  "CategoryId": 7,
+  "BarkodNo": "412ef95a-6d55-4e59-bca9-18c9096dd3e5",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T16:30:57.5164632+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3128,
+      "SubstanceId": 4104,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4104,
+        "Name": "SAFASDSA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T16:30:57.5514533+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "4",
+      "Id": 3129,
+      "SubstanceId": 4105,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "5",
+        "Id": 4105,
+        "Name": "FASDA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T16:30:57.5533242+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 3127,
+      "SubstanceId": 9,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": null
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "7",
+      "Id": 2041,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\281f851b-6386-487d-a4aa-40b0f8718e7f",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "8",
+      "Id": 2042,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\6f6aa944-87c4-4a81-8909-7c112072ad99",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 16:30:59.0485|ERROR|YesilEv.Log.Concrete.FileLogger`1|Hata Oluştu 8.09.2022 16:30:59 {
+  "$id": "1",
+  "Id": 2042,
+  "Name": "BargelloNllog",
+  "CompanyId": 4,
+  "CategoryId": 7,
+  "BarkodNo": "412ef95a-6d55-4e59-bca9-18c9096dd3e5",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T16:30:57.5164632+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3128,
+      "SubstanceId": 4104,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4104,
+        "Name": "SAFASDSA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T16:30:57.5514533+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "4",
+      "Id": 3129,
+      "SubstanceId": 4105,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "5",
+        "Id": 4105,
+        "Name": "FASDA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T16:30:57.5533242+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 3127,
+      "SubstanceId": 9,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": null
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "7",
+      "Id": 2041,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\281f851b-6386-487d-a4aa-40b0f8718e7f",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "8",
+      "Id": 2042,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\6f6aa944-87c4-4a81-8909-7c112072ad99",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}|System.InvalidOperationException: Uygulamada konsol olmadığında veya konsol girdisi bir dosyadan yönlendirildiğinde tuşlar okunamıyor. Try Console.Read'i deneyin.
+   konum: System.Console.ReadKey(Boolean intercept)
+   konum: System.Console.ReadKey()
+   konum: YesilEv.Log.Concrete.FileLogger`1.Info(T data) C:\Users\MONSTER\Desktop\YesilEv-V6.winform\YesilEv\YesilEv.Log\Concrete\FileLogger.cs içinde: satır 31
+2022-09-08 17:31:00.9212|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2043,
+  "Name": "Farma bisi",
+  "CompanyId": 3,
+  "CategoryId": 6,
+  "BarkodNo": "786b86cb-3166-41b6-8cae-5c6ea070db11",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T17:30:59.5362443+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3131,
+      "SubstanceId": 4106,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4106,
+        "Name": "FASDSA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T17:30:59.5614515+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "4",
+      "Id": 3132,
+      "SubstanceId": 4107,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "5",
+        "Id": 4107,
+        "Name": "SADASFA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T17:30:59.5624796+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 3133,
+      "SubstanceId": 4108,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "7",
+        "Id": 4108,
+        "Name": "SDASFASD",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T17:30:59.5635335+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "6"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "8",
+      "Id": 3134,
+      "SubstanceId": 4109,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "9",
+        "Id": 4109,
+        "Name": "ASF",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T17:30:59.5665642+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "8"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "10",
+      "Id": 3130,
+      "SubstanceId": 4099,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": null
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "11",
+      "Id": 2043,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\e59eac73-7f70-4bd9-84ba-c709b87c318c",
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "12",
+      "Id": 2044,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\2137a414-f222-4653-8f62-db794c57a43f",
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 18:11:59.3006|INFO|YesilEv.Log.Concrete.FileLogger`1|null
+2022-09-08 18:15:49.1567|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2045,
+  "Name": "asdsadasd",
+  "CompanyId": 4,
+  "CategoryId": 5,
+  "BarkodNo": "30f13903-64ce-426a-9c67-dfec30bc08d1",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T18:15:45.1663165+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [],
+  "Pictures": [
+    {
+      "$id": "2",
+      "Id": 2045,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\60f72c8f-1015-473d-975b-5bcfa2c2130d",
+      "ProductId": 2045,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "3",
+      "Id": 2046,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\7a55de65-0807-49b1-977c-996000ed44b4",
+      "ProductId": 2045,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 18:16:34.7363|INFO|YesilEv.Log.Concrete.FileLogger`1|null
+2022-09-08 18:16:45.6700|INFO|YesilEv.Log.Concrete.FileLogger`1|null
+2022-09-08 18:17:26.8772|INFO|YesilEv.Log.Concrete.FileLogger`1|null
+2022-09-08 18:19:59.2272|INFO|YesilEv.Log.Concrete.FileLogger`1|null
+2022-09-08 18:49:31.0459|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2050,
+  "Name": "adsadasdas",
+  "CompanyId": 4,
+  "CategoryId": 7,
+  "BarkodNo": "f245e667-f32c-47b1-aebb-eee87f286bd6",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T18:49:29.140833+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3140,
+      "SubstanceId": 4111,
+      "ProductId": 2050,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4111,
+        "Name": "ASDASDASDAS",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T18:49:29.1845477+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "4",
+      "Id": 2047,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\91e1f2de-154e-4096-94e3-5282e8bb76b5",
+      "ProductId": 2050,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "5",
+      "Id": 2048,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YesilEv-V6.winform\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\d08adeff-d499-4a5a-9bf9-ad92c80817ab",
+      "ProductId": 2050,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 20:02:37.3138|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2042,
+  "Name": "gaergearg",
+  "CompanyId": 3,
+  "CategoryId": 5,
+  "BarkodNo": "271513e7-27bc-4ccd-98ab-efbfed649bc7",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T20:02:36.2627548+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3035,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3123,
+      "SubstanceId": 4098,
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4098,
+        "Name": "SGRA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T20:02:36.2757578+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "4",
+      "Id": 2039,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\3f8215de-d073-44a9-8d2b-edd6629aae64",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "5",
+      "Id": 2040,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\f3b84283-3672-431e-9c3f-1a5423026fe0",
+      "ProductId": 2042,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 20:03:27.3738|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2043,
+  "Name": "dhdth",
+  "CompanyId": 3,
+  "CategoryId": 4,
+  "BarkodNo": "ba0a50dc-9bde-4381-a262-4dfe3cf8da9b",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T20:03:26.3693325+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3035,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3124,
+      "SubstanceId": 4099,
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4099,
+        "Name": "AEGAERG",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T20:03:26.3823359+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "4",
+      "Id": 2041,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\3ed01929-5aa4-4162-8a64-233d71663152",
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "5",
+      "Id": 2042,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\74d8bd11-8bda-4d2a-84d4-5aad2719a74c",
+      "ProductId": 2043,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-08 20:03:51.3287|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2044,
+  "Name": "gaegre",
+  "CompanyId": 3,
+  "CategoryId": 5,
+  "BarkodNo": "82f0631f-f4ec-41f4-8c13-2bfe4e36a65f",
+  "isActive": null,
+  "CreatedDate": "2022-09-08T20:03:50.5588574+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3035,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3125,
+      "SubstanceId": 4100,
+      "ProductId": 2044,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4100,
+        "Name": "ATHHAT",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-08T20:03:50.5598571+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "4",
+      "Id": 2043,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\48564775-452c-4145-9859-f5e15b7fbf86",
+      "ProductId": 2044,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "5",
+      "Id": 2044,
+      "PicturePath": "C:\\Users\\Ferid\\Desktop\\yesilevvUpdated\\Güncel33\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\90acb770-92e5-444e-b2e7-8eb4eeb6d897",
+      "ProductId": 2044,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}
+2022-09-14 15:13:46.2429|INFO|YesilEv.Log.Concrete.FileLogger`1|{
+  "$id": "1",
+  "Id": 2054,
+  "Name": "Bargello yeni son",
+  "CompanyId": 4,
+  "CategoryId": 7,
+  "BarkodNo": "4e053cb3-eebb-4340-90cd-9b2f454ddab0fasdafasdsafasdsaf",
+  "isActive": null,
+  "CreatedDate": "2022-09-14T15:13:43.8152722+03:00",
+  "ModifiedDate": null,
+  "CreatedBy": 3031,
+  "ModifiedBy": null,
+  "IsApproved": false,
+  "Company": null,
+  "Category": null,
+  "ProductContent": [
+    {
+      "$id": "2",
+      "Id": 3150,
+      "SubstanceId": 4118,
+      "ProductId": 2054,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "3",
+        "Id": 4118,
+        "Name": "AFASFA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-14T15:13:43.976759+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "2"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "4",
+      "Id": 3151,
+      "SubstanceId": 4119,
+      "ProductId": 2054,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "5",
+        "Id": 4119,
+        "Name": "FASDASF",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-14T15:13:43.9777571+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "4"
+          }
+        ]
+      }
+    },
+    {
+      "$id": "6",
+      "Id": 3152,
+      "SubstanceId": 4120,
+      "ProductId": 2054,
+      "Product": {
+        "$ref": "1"
+      },
+      "Substance": {
+        "$id": "7",
+        "Id": 4120,
+        "Name": "ASFA",
+        "RisktType": null,
+        "isActive": true,
+        "CreatedDate": "2022-09-14T15:13:43.9787542+03:00",
+        "ModifiedDate": null,
+        "CreatedBy": null,
+        "ModifiedBy": null,
+        "ProductContent": [
+          {
+            "$ref": "6"
+          }
+        ]
+      }
+    }
+  ],
+  "Pictures": [
+    {
+      "$id": "8",
+      "Id": 2055,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YeşilEv-Son\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\c2140b03-8404-4899-83e6-c4fc0b6e9d83",
+      "ProductId": 2054,
+      "Product": {
+        "$ref": "1"
+      }
+    },
+    {
+      "$id": "9",
+      "Id": 2056,
+      "PicturePath": "C:\\Users\\MONSTER\\Desktop\\YeşilEv-Son\\YesilEv\\YesilEv.UI\\bin\\Upload\\Pictures\\08a07716-fce9-4f2e-8795-5818136e6ed7",
+      "ProductId": 2054,
+      "Product": {
+        "$ref": "1"
+      }
+    }
+  ],
+  "SearchHistory": [],
+  "UserProcess": []
+}

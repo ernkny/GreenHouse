@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GreenHomeExamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AppInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AboutUs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="KullanımKosullari" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UygulamaToplamPuanı" Type="Int64" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Authority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuthorityName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="RoleAuthority" Relationship="Self.FK_RoleAuthority_Authority1" FromRole="Authority" ToRole="RoleAuthority" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="SubCategory" Relationship="Self.FK_SubCategory_Category1" FromRole="Category" ToRole="SubCategory" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Product_Company1" FromRole="Company" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCategoryId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="BarkodNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ProductContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductFrontPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductBackPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_Product_Company1" FromRole="Product" ToRole="Company" />
+    <NavigationProperty Name="SubCategory" Relationship="Self.FK_Product_SubCategory" FromRole="Product" ToRole="SubCategory" />
+    <NavigationProperty Name="ProductContent1" Relationship="Self.FK_ProductContent_Product" FromRole="Product" ToRole="ProductContent" />
+    <NavigationProperty Name="SearchHistory" Relationship="Self.FK_SearchHistory_Product1" FromRole="Product" ToRole="SearchHistory" />
+    <NavigationProperty Name="UserProcess" Relationship="Self.FK_UserProcess_Product1" FromRole="Product" ToRole="UserProcess" />
+  </EntityType>
+  <EntityType Name="ProductContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubstanceId" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ProductContent_Product" FromRole="ProductContent" ToRole="Product" />
+    <NavigationProperty Name="Substance" Relationship="Self.FK_ProductContent_Substance" FromRole="ProductContent" ToRole="Substance" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="RoleAuthority" Relationship="Self.FK_RoleAuthority_Role1" FromRole="Role" ToRole="RoleAuthority" />
+    <NavigationProperty Name="RoleUser" Relationship="Self.FK_RoleUser_Role1" FromRole="Role" ToRole="RoleUser" />
+  </EntityType>
+  <EntityType Name="RoleAuthority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" />
+    <Property Name="AuthorityId" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Authority" Relationship="Self.FK_RoleAuthority_Authority1" FromRole="RoleAuthority" ToRole="Authority" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_RoleAuthority_Role1" FromRole="RoleAuthority" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="RoleUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="RolId" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_RoleUser_Role1" FromRole="RoleUser" ToRole="Role" />
+    <NavigationProperty Name="User" Relationship="Self.FK_RoleUser_User1" FromRole="RoleUser" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SearchHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_SearchHistory_Product1" FromRole="SearchHistory" ToRole="Product" />
+    <NavigationProperty Name="User" Relationship="Self.FK_SearchHistory_User1" FromRole="SearchHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Situation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Situation1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="UserProcess" Relationship="Self.FK_UserProcess_Situation1" FromRole="Situation" ToRole="UserProcess" />
+  </EntityType>
+  <EntityType Name="SubCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Category1" FromRole="SubCategory" ToRole="Category" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Substance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RisktType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="ProductContent" Relationship="Self.FK_ProductContent_Substance" FromRole="Substance" ToRole="ProductContent" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SocialMedia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="RoleUser" Relationship="Self.FK_RoleUser_User1" FromRole="User" ToRole="RoleUser" />
+    <NavigationProperty Name="SearchHistory" Relationship="Self.FK_SearchHistory_User1" FromRole="User" ToRole="SearchHistory" />
+    <NavigationProperty Name="UserProcess" Relationship="Self.FK_UserProcess_User1" FromRole="User" ToRole="UserProcess" />
+  </EntityType>
+  <EntityType Name="UserProcess">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="SituationId" Type="Int32" />
+    <Property Name="AppStarCount" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_UserProcess_Product1" FromRole="UserProcess" ToRole="Product" />
+    <NavigationProperty Name="Situation" Relationship="Self.FK_UserProcess_Situation1" FromRole="UserProcess" ToRole="Situation" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserProcess_User1" FromRole="UserProcess" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_RoleAuthority_Authority1">
+    <End Role="Authority" Type="Self.Authority" Multiplicity="0..1" />
+    <End Role="RoleAuthority" Type="Self.RoleAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleAuthority">
+        <PropertyRef Name="AuthorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubCategory_Category1">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Company1">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_SubCategory">
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductContent_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ProductContent" Type="Self.ProductContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductContent">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SearchHistory_Product1">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="SearchHistory" Type="Self.SearchHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SearchHistory">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProcess_Product1">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="UserProcess" Type="Self.UserProcess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProcess">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductContent_Substance">
+    <End Role="Substance" Type="Self.Substance" Multiplicity="0..1" />
+    <End Role="ProductContent" Type="Self.ProductContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Substance">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductContent">
+        <PropertyRef Name="SubstanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAuthority_Role1">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="RoleAuthority" Type="Self.RoleAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleAuthority">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleUser_Role1">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleUser">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleUser_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SearchHistory_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="SearchHistory" Type="Self.SearchHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SearchHistory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProcess_Situation1">
+    <End Role="Situation" Type="Self.Situation" Multiplicity="0..1" />
+    <End Role="UserProcess" Type="Self.UserProcess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Situation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProcess">
+        <PropertyRef Name="SituationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProcess_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserProcess" Type="Self.UserProcess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProcess">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GreenHomeExamEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppInfo" EntityType="Self.AppInfo" />
+    <EntitySet Name="Authority" EntityType="Self.Authority" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Company" EntityType="Self.Company" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductContent" EntityType="Self.ProductContent" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="RoleAuthority" EntityType="Self.RoleAuthority" />
+    <EntitySet Name="RoleUser" EntityType="Self.RoleUser" />
+    <EntitySet Name="SearchHistory" EntityType="Self.SearchHistory" />
+    <EntitySet Name="Situation" EntityType="Self.Situation" />
+    <EntitySet Name="SubCategory" EntityType="Self.SubCategory" />
+    <EntitySet Name="Substance" EntityType="Self.Substance" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="UserProcess" EntityType="Self.UserProcess" />
+    <AssociationSet Name="FK_RoleAuthority_Authority1" Association="Self.FK_RoleAuthority_Authority1">
+      <End Role="Authority" EntitySet="Authority" />
+      <End Role="RoleAuthority" EntitySet="RoleAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubCategory_Category1" Association="Self.FK_SubCategory_Category1">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="SubCategory" EntitySet="SubCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Company1" Association="Self.FK_Product_Company1">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_SubCategory" Association="Self.FK_Product_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductContent_Product" Association="Self.FK_ProductContent_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductContent" EntitySet="ProductContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SearchHistory_Product1" Association="Self.FK_SearchHistory_Product1">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SearchHistory" EntitySet="SearchHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProcess_Product1" Association="Self.FK_UserProcess_Product1">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="UserProcess" EntitySet="UserProcess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductContent_Substance" Association="Self.FK_ProductContent_Substance">
+      <End Role="Substance" EntitySet="Substance" />
+      <End Role="ProductContent" EntitySet="ProductContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAuthority_Role1" Association="Self.FK_RoleAuthority_Role1">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RoleAuthority" EntitySet="RoleAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleUser_Role1" Association="Self.FK_RoleUser_Role1">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RoleUser" EntitySet="RoleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleUser_User1" Association="Self.FK_RoleUser_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="RoleUser" EntitySet="RoleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SearchHistory_User1" Association="Self.FK_SearchHistory_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="SearchHistory" EntitySet="SearchHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProcess_Situation1" Association="Self.FK_UserProcess_Situation1">
+      <End Role="Situation" EntitySet="Situation" />
+      <End Role="UserProcess" EntitySet="UserProcess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProcess_User1" Association="Self.FK_UserProcess_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserProcess" EntitySet="UserProcess" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
